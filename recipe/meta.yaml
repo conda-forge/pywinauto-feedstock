@@ -1,6 +1,6 @@
 {% set name = "pywinauto" %}
-{% set version = "0.6.5" %}
-{% set file_ext = "zip" %}
+{% set version = "0.6.6" %}
+{% set file_ext = "tar.gz" %}
 
 package:
   name: {{ name|lower }}
@@ -8,11 +8,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ file_ext }}
-  sha256: e115463806acc41b8b5aeaeaece9cd5996a3091d1baa18b1dc91736c7684449d
+  sha256: 5394e02eec42d329387f11003b502844730df9c475129bb785ff4e8351e5e086
 
 build:
-  number: 1000
-  skip: True  # [osx]
+  number: 0
+  skip: True  # [osx or py27]
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
 
 requirements:
