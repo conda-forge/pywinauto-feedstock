@@ -1,5 +1,5 @@
 {% set name = "pywinauto" %}
-{% set version = "0.6.6" %}
+{% set version = "0.6.7" %}
 {% set file_ext = "tar.gz" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ file_ext }}
-  sha256: 5394e02eec42d329387f11003b502844730df9c475129bb785ff4e8351e5e086
+  sha256: 9da7baa9f884bf084d5362ef34863321e6d1de12731589f7a797a195306548c6
 
 build:
   number: 0
