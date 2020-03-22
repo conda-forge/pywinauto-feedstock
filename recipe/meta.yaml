@@ -1,17 +1,16 @@
 {% set name = "pywinauto" %}
 {% set version = "0.6.8" %}
-{% set file_ext = "tar.gz" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ file_ext }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: de23f1e977cc51e7eddd95c8f365710343136433968d1e2ad377962d6bd6540a
 
 build:
-  number: 0
+  number: 1
   skip: True  # [osx or py27]
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
 
