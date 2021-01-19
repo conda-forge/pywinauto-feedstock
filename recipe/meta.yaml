@@ -19,7 +19,7 @@ requirements:
     - python
     - pip
   run:
-    - comtypes     # [win]
+    - comtypes <1.1.8  # [win]
     - python
     - python-xlib  # [not win]
     - pywin32 >=300  # [win]
