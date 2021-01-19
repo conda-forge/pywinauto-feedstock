@@ -22,7 +22,7 @@ requirements:
     - comtypes     # [win]
     - python
     - python-xlib  # [not win]
-    - pywin32      # [win]
+    - pywin32 >=300  # [win]
     - six
 
 test:
