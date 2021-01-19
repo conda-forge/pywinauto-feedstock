@@ -10,19 +10,19 @@ source:
   sha256: de23f1e977cc51e7eddd95c8f365710343136433968d1e2ad377962d6bd6540a
 
 build:
-  number: 1
+  number: 2
   skip: True  # [osx or py27]
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   host:
     - python
     - pip
   run:
-    - comtypes     # [win]
+    - comtypes <1.1.8  # [win]
     - python
     - python-xlib  # [not win]
-    - pywin32      # [win]
+    - pywin32 >=300  # [win]
     - six
 
 test:
