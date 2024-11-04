@@ -10,7 +10,7 @@ source:
   sha256: de23f1e977cc51e7eddd95c8f365710343136433968d1e2ad377962d6bd6540a
 
 build:
-  number: 6
+  number: 7
   skip: True  # [osx or py==27]
   script: "{{ PYTHON }} -m pip install . -vv"
 
@@ -18,6 +18,7 @@ requirements:
   host:
     - python
     - pip
+    - setuptools
   run:
     - comtypes >=1.1.9  # [win]
     - python
