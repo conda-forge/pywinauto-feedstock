@@ -18,6 +18,7 @@ requirements:
   host:
     - python
     - pip
+    - setuptools
   run:
     - comtypes >=1.1.9  # [win]
     - python
