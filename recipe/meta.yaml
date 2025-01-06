@@ -1,17 +1,17 @@
 {% set name = "pywinauto" %}
-{% set version = "0.6.8" %}
+{% set version = "0.6.9" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: de23f1e977cc51e7eddd95c8f365710343136433968d1e2ad377962d6bd6540a
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 94d710bfa796df245250f952ffa65d97233d9807bcd42e052b71b81af469b6de
 
 build:
-  number: 7
-  skip: True  # [osx or py==27]
+  number: 0
+  skip: true  # [osx or py==27]
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
