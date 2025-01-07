@@ -24,6 +24,7 @@ requirements:
     - python
     - python-xlib  # [not win]
     - pywin32  # [win]
+    - six
 
 test:
   imports:
