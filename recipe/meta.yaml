@@ -11,7 +11,7 @@ source:
 
 build:
   number: 0
-  skip: true  # [osx or py==27]
+  skip: true  # [osx]
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
@@ -20,11 +20,10 @@ requirements:
     - pip
     - setuptools
   run:
-    - comtypes >=1.1.9  # [win]
+    - comtypes  # [win]
     - python
     - python-xlib  # [not win]
-    - pywin32 >=300  # [win]
-    - six
+    - pywin32  # [win]
 
 test:
   imports:
